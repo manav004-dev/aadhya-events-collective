@@ -26,8 +26,8 @@ export const Route = createFileRoute("/")({
   component: AadhyaLanding,
 });
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/";
-const INSTAGRAM_URL = "https://instagram.com/aadhya.events";
+const WHATSAPP_URL = "https://chat.whatsapp.com/DAfc2GlccG2DxLh86XflW9";
+const INSTAGRAM_URL = "https://www.instagram.com/aadhya.events";
 const PHONE = "9227117871";
 const EMAIL = "aadhya.events0512@gmail.com";
 
@@ -61,15 +61,15 @@ function AadhyaLanding() {
 function AmbientBackdrop() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-      <div className="absolute inset-0" style={{ background: "var(--gradient-emerald)" }} />
+      <div className="absolute inset-0" style={{ background: "var(--gradient-ivory)" }} />
       <div className="absolute inset-0" style={{ background: "var(--gradient-radial-glow)" }} />
       <div
-        className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full opacity-30 blur-3xl"
+        className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full opacity-20 blur-3xl"
         style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }}
       />
       <div
-        className="absolute top-1/2 -right-40 h-[32rem] w-[32rem] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }}
+        className="absolute top-1/2 -right-40 h-[32rem] w-[32rem] rounded-full opacity-15 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--emerald-glow) 0%, transparent 70%)" }}
       />
     </div>
   );
@@ -97,7 +97,7 @@ function Navbar() {
           <img src={logoAsset.url} alt="Aadhya Events" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--gold)]/40" />
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold tracking-wide text-gold-gradient">AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-soft)]/80">Elegance In Every Event</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -157,7 +157,7 @@ function Navbar() {
 /* --------------------------- Hero --------------------------- */
 function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen items-center pt-28">
+    <section className="on-dark relative isolate flex min-h-screen items-center pt-28">
       <div className="absolute inset-0 -z-10">
         <img src={heroConcert} alt="" className="h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--emerald-deep)]/70 via-[var(--emerald-deep)]/85 to-[var(--emerald-deep)]" />
@@ -165,7 +165,7 @@ function Hero() {
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/30 bg-[var(--gold)]/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-[var(--gold-soft)] backdrop-blur">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/30 bg-[var(--gold)]/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-[var(--label-gold)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" /> Ahmedabad · Est. Event Network
           </div>
           <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
@@ -173,8 +173,11 @@ function Hero() {
             <br />
             <span className="text-gold-gradient italic">Building Communities.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            Aadhya Events is Ahmedabad's trusted event management, pass distribution, and event manpower network. From concerts and Navratri festivals to artist management and large-scale event operations, we deliver unforgettable experiences.
+          <p className="mt-7 max-w-2xl font-display text-2xl font-light leading-[1.5] tracking-[0.005em] text-foreground/90 sm:text-3xl">
+            Aadhya Events is Ahmedabad's trusted partner for event management,
+            pass distribution, and event manpower — from concerts and Navratri
+            festivals to artist management and large-scale productions, we
+            craft <em className="text-gold-gradient not-italic font-medium">unforgettable experiences</em>.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
@@ -237,7 +240,7 @@ function Stats() {
     <section className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">Our Growing Network</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Our Growing Network</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">Trusted across <em className="text-gold-gradient not-italic">Ahmedabad</em></h2>
         </div>
         <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
@@ -270,13 +273,13 @@ function About() {
             <img src={gConcert} alt="Live concert" width={1280} height={1024} loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="glass-card absolute -bottom-8 -right-4 hidden w-64 rounded-2xl p-5 sm:block animate-float-slow">
-            <div className="text-xs uppercase tracking-[0.2em] text-[var(--gold-soft)]">Pass Paradise</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-[var(--label-gold)]">Pass Paradise</div>
             <div className="mt-1 font-display text-lg">Our B2B Pass Network</div>
             <div className="mt-1 text-xs text-foreground/70">Resellers, partners, organizers — all connected.</div>
           </div>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">About Us</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">About Us</p>
           <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
             Crafting <em className="text-gold-gradient not-italic">Unforgettable</em> Experiences
           </h2>
@@ -310,7 +313,7 @@ function Services() {
     <section id="services" className="relative py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">What We Do</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">What We Do</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">Our <em className="text-gold-gradient not-italic">Services</em></h2>
           <p className="mx-auto mt-4 max-w-2xl text-foreground/75">End-to-end event solutions designed for organizers, brands and partners.</p>
         </div>
@@ -350,7 +353,7 @@ function WhyChoose() {
         <div className="glass-card rounded-3xl p-10 sm:p-14">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">Why Choose Us</p>
+              <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Why Choose Us</p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl">
                 Why Choose <em className="text-gold-gradient not-italic">Aadhya Events?</em>
               </h2>
@@ -387,7 +390,7 @@ function Community() {
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">The Inner Circle</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">The Inner Circle</p>
           <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
             Join Ahmedabad's <em className="text-gold-gradient not-italic">Fast-Growing</em> Event Community
           </h2>
@@ -405,7 +408,7 @@ function Community() {
                 <MessageCircle className="h-7 w-7 text-[var(--emerald-deep)]" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold-soft)]">WhatsApp Community</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--label-gold)]">WhatsApp Community</p>
                 <h3 className="font-display text-2xl">Instant Event Updates</h3>
               </div>
             </div>
@@ -431,7 +434,7 @@ function Community() {
                 <Instagram className="h-7 w-7 text-[var(--emerald-deep)]" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[var(--gold-soft)]">Instagram</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-[var(--label-gold)]">Instagram</p>
                 <h3 className="font-display text-2xl">Behind The Scenes</h3>
               </div>
             </div>
@@ -470,7 +473,7 @@ function Gallery() {
     <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">Gallery</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Gallery</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">Moments We've <em className="text-gold-gradient not-italic">Created</em></h2>
         </div>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
@@ -487,7 +490,7 @@ function Gallery() {
               <img src={g.src} alt={g.cat} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--emerald-deep)]/95 via-[var(--emerald-deep)]/20 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--gold-soft)]">Category</div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--label-gold)]">Category</div>
                 <div className="mt-0.5 font-display text-lg">{g.cat}</div>
               </figcaption>
             </figure>
@@ -505,7 +508,7 @@ function ContactCTA() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="glass-card relative overflow-hidden rounded-[2rem] p-10 text-center sm:p-16">
           <div aria-hidden className="absolute inset-0 -z-10 opacity-60" style={{ background: "var(--gradient-radial-glow)" }} />
-          <p className="text-xs uppercase tracking-[0.35em] text-[var(--gold-soft)]">Let's Talk</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Let's Talk</p>
           <h2 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">
             Planning an <em className="text-gold-gradient not-italic">Event?</em>
           </h2>
@@ -530,7 +533,7 @@ function ContactCTA() {
             ].map((c, i) => (
               <div key={i} className="rounded-2xl border border-[var(--gold)]/20 bg-white/[0.03] p-5 text-left">
                 <c.icon className="h-5 w-5 text-[var(--gold)]" />
-                <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-[var(--gold-soft)]">{c.label}</div>
+                <div className="mt-3 text-[10px] uppercase tracking-[0.3em] text-[var(--label-gold)]">{c.label}</div>
                 {c.href ? (
                   <a href={c.href} className="mt-1 block break-all text-sm text-foreground/90 hover:text-[var(--gold)]">{c.value}</a>
                 ) : (
@@ -548,7 +551,7 @@ function ContactCTA() {
 /* --------------------------- Footer --------------------------- */
 function Footer() {
   return (
-    <footer className="relative mt-12 border-t border-[var(--gold)]/15 bg-[var(--emerald-deep)]/60 backdrop-blur">
+    <footer className="on-dark relative mt-12 border-t border-[var(--gold)]/20" style={{ background: "var(--gradient-emerald)" }}>
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
@@ -556,7 +559,7 @@ function Footer() {
               <img src={logoAsset.url} alt="Aadhya Events" className="h-12 w-12 rounded-full ring-1 ring-[var(--gold)]/40" />
               <div>
                 <div className="font-display text-lg text-gold-gradient">AADHYA EVENTS</div>
-                <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-soft)]/80">Elegance In Every Event</div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm text-foreground/70 leading-relaxed">
