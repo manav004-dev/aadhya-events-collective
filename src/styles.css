@@ -73,6 +73,10 @@
   --ivory: oklch(0.97 0.02 90);
   --cream: oklch(0.965 0.018 88);
 
+  /* Muted gold used for small uppercase labels. Tuned for legibility on
+     the ivory body; overridden inside .on-dark to a brighter tone. */
+  --label-gold: oklch(0.58 0.14 75);
+
   --background: oklch(0.975 0.012 88);
   --foreground: oklch(0.24 0.07 155);
   --card: oklch(0.99 0.008 88);
@@ -179,6 +183,7 @@ html {
 .on-dark {
   --foreground: oklch(0.97 0.02 90);
   --muted-foreground: oklch(0.86 0.04 90);
+  --label-gold: oklch(0.86 0.11 88);
   color: var(--foreground);
 }
 .on-dark .glass-card,
