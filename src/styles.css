@@ -155,9 +155,14 @@ html {
 }
 
 @utility glass-nav {
-  background: oklch(0.985 0.01 88 / 0.78);
-  backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid oklch(0.78 0.14 85 / 0.22);
+  background: linear-gradient(180deg, oklch(0.24 0.07 155 / 0.88), oklch(0.24 0.07 155 / 0.72));
+  backdrop-filter: blur(22px) saturate(170%);
+  border-bottom: 1px solid oklch(0.78 0.14 85 / 0.35);
+  box-shadow: 0 8px 30px -12px oklch(0.18 0.05 155 / 0.45);
+}
+
+@utility text-glow-gold {
+  text-shadow: 0 1px 2px oklch(0.18 0.05 155 / 0.6), 0 0 18px oklch(0.78 0.14 85 / 0.25);
 }
 
 @utility btn-gold {
