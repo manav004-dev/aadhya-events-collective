@@ -70,24 +70,27 @@
   --gold-soft: oklch(0.86 0.11 88);
   --gold-deep: oklch(0.65 0.13 75);
 
-  --background: oklch(0.20 0.06 155);
-  --foreground: oklch(0.97 0.02 90);
-  --card: oklch(0.27 0.07 155);
-  --card-foreground: oklch(0.97 0.02 90);
-  --popover: oklch(0.24 0.07 155);
-  --popover-foreground: oklch(0.97 0.02 90);
+  --ivory: oklch(0.97 0.02 90);
+  --cream: oklch(0.965 0.018 88);
+
+  --background: oklch(0.975 0.012 88);
+  --foreground: oklch(0.24 0.07 155);
+  --card: oklch(0.99 0.008 88);
+  --card-foreground: oklch(0.24 0.07 155);
+  --popover: oklch(0.99 0.008 88);
+  --popover-foreground: oklch(0.24 0.07 155);
   --primary: var(--gold);
   --primary-foreground: oklch(0.18 0.05 155);
-  --secondary: oklch(0.30 0.08 155);
-  --secondary-foreground: oklch(0.97 0.02 90);
-  --muted: oklch(0.28 0.06 155);
-  --muted-foreground: oklch(0.78 0.04 90);
+  --secondary: oklch(0.93 0.02 88);
+  --secondary-foreground: oklch(0.24 0.07 155);
+  --muted: oklch(0.94 0.018 88);
+  --muted-foreground: oklch(0.40 0.05 155);
   --accent: var(--gold);
   --accent-foreground: oklch(0.18 0.05 155);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.78 0.14 85 / 0.18);
-  --input: oklch(0.78 0.14 85 / 0.22);
+  --border: oklch(0.24 0.07 155 / 0.12);
+  --input: oklch(0.24 0.07 155 / 0.18);
   --ring: var(--gold);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -104,10 +107,11 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
   --gradient-gold: linear-gradient(135deg, var(--gold-soft), var(--gold), var(--gold-deep));
+  --gradient-ivory: linear-gradient(180deg, oklch(0.985 0.01 88), oklch(0.95 0.02 88));
   --gradient-emerald: linear-gradient(180deg, var(--emerald-deep), oklch(0.16 0.05 155));
-  --gradient-radial-glow: radial-gradient(circle at 50% 0%, oklch(0.78 0.14 85 / 0.18), transparent 60%);
-  --shadow-luxe: 0 30px 80px -30px oklch(0.78 0.14 85 / 0.35), 0 0 0 1px oklch(0.78 0.14 85 / 0.12) inset;
-  --shadow-glass: 0 20px 60px -30px oklch(0 0 0 / 0.5);
+  --gradient-radial-glow: radial-gradient(circle at 50% 0%, oklch(0.78 0.14 85 / 0.12), transparent 65%);
+  --shadow-luxe: 0 30px 80px -30px oklch(0.24 0.07 155 / 0.25), 0 0 0 1px oklch(0.24 0.07 155 / 0.06) inset;
+  --shadow-glass: 0 20px 50px -30px oklch(0.24 0.07 155 / 0.25);
 }
 
 @layer base {
@@ -116,7 +120,7 @@
   }
 
   body {
-    background: var(--gradient-emerald);
+    background: var(--gradient-ivory);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -140,16 +144,16 @@ html {
 }
 
 @utility glass-card {
-  background: oklch(0.97 0.02 90 / 0.04);
+  background: oklch(1 0 0 / 0.6);
   backdrop-filter: blur(18px) saturate(140%);
-  border: 1px solid oklch(0.78 0.14 85 / 0.18);
+  border: 1px solid oklch(0.24 0.07 155 / 0.08);
   box-shadow: var(--shadow-glass);
 }
 
 @utility glass-nav {
-  background: oklch(0.18 0.05 155 / 0.55);
+  background: oklch(0.985 0.01 88 / 0.78);
   backdrop-filter: blur(20px) saturate(160%);
-  border-bottom: 1px solid oklch(0.78 0.14 85 / 0.18);
+  border-bottom: 1px solid oklch(0.78 0.14 85 / 0.22);
 }
 
 @utility btn-gold {
@@ -169,6 +173,19 @@ html {
   50% { transform: translateY(-12px); }
 }
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+/* Sections placed over a dark background (hero image, footer) opt into
+   light foreground colors by composing this utility class. */
+.on-dark {
+  --foreground: oklch(0.97 0.02 90);
+  --muted-foreground: oklch(0.86 0.04 90);
+  color: var(--foreground);
+}
+.on-dark .glass-card,
+.glass-card.on-dark {
+  background: oklch(1 0 0 / 0.06);
+  border-color: oklch(0.78 0.14 85 / 0.22);
+}
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
