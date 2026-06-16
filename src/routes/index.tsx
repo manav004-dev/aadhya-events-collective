@@ -96,8 +96,8 @@ function Navbar() {
         <a href="#home" className="flex items-center gap-3">
           <img src={logoAsset.url} alt="Aadhya Events" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--gold)]/40" />
           <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-wide text-gold-gradient text-glow-gold">AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-soft)]">Elegance In Every Event</div>
+            <div className="font-display text-lg font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -106,7 +106,7 @@ function Navbar() {
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-semibold text-white/95 transition-colors hover:text-[var(--gold)]"
+              className="text-sm font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
             >
               {n.label}
             </a>
@@ -140,7 +140,7 @@ function Navbar() {
         <div className="glass-nav lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-semibold text-white/95 hover:text-[var(--gold)]">
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-semibold text-[var(--emerald-deep)] hover:text-[var(--gold-deep)]">
                 {n.label}
               </a>
             ))}
