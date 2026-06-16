@@ -159,8 +159,8 @@ function Hero() {
   return (
     <section className="on-dark relative isolate flex min-h-screen items-center pt-28">
       <div className="absolute inset-0 -z-10">
-        <img src={heroConcert} alt="" className="h-full w-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--emerald-deep)]/70 via-[var(--emerald-deep)]/85 to-[var(--emerald-deep)]" />
+        <img src={heroConcert} alt="" className="h-full w-full object-cover opacity-55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#1a1208]/85 to-[#0b0805]" />
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
