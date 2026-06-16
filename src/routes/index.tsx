@@ -89,15 +89,15 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-2" : "py-4"
+        scrolled ? "glass-nav py-2" : "glass-nav py-3"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
           <img src={logoAsset.url} alt="Aadhya Events" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--gold)]/40" />
           <div className="leading-tight">
-            <div className="font-display text-lg font-semibold tracking-wide text-gold-gradient">AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
+            <div className="font-display text-lg font-bold tracking-wide text-gold-gradient text-glow-gold">AADHYA EVENTS</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-soft)]">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -106,7 +106,7 @@ function Navbar() {
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-medium text-foreground/85 transition-colors hover:text-[var(--gold)]"
+              className="text-sm font-semibold text-white/95 transition-colors hover:text-[var(--gold)]"
             >
               {n.label}
             </a>
@@ -140,7 +140,7 @@ function Navbar() {
         <div className="glass-nav lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-medium text-foreground/85 hover:text-[var(--gold)]">
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-semibold text-white/95 hover:text-[var(--gold)]">
                 {n.label}
               </a>
             ))}
@@ -272,11 +272,6 @@ function About() {
           <div className="glass-card relative overflow-hidden rounded-3xl">
             <img src={gConcert} alt="Live concert" width={1280} height={1024} loading="lazy" className="h-full w-full object-cover" />
           </div>
-          <div className="glass-card absolute -bottom-8 -right-4 hidden w-64 rounded-2xl p-5 sm:block animate-float-slow">
-            <div className="text-xs uppercase tracking-[0.2em] text-[var(--label-gold)]">Pass Paradise</div>
-            <div className="mt-1 font-display text-lg">Our B2B Pass Network</div>
-            <div className="mt-1 text-xs text-foreground/70">Resellers, partners, organizers — all connected.</div>
-          </div>
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">About Us</p>
@@ -392,7 +387,7 @@ function Community() {
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">The Inner Circle</p>
           <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
-            Join Ahmedabad's <em className="text-gold-gradient not-italic">Fast-Growing</em> Event Community
+            Join Ahmedabad's <em className="not-italic font-bold text-glow-gold" style={{ color: "var(--gold-deep)" }}>Fast-Growing</em> Event Community
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-foreground/80">
             Get event updates, pass offers, concert announcements, Navratri launches, stall opportunities, and exclusive event access.
@@ -488,10 +483,12 @@ function Gallery() {
           {GALLERY.map((g, i) => (
             <figure key={i} className={`group relative overflow-hidden rounded-2xl ${g.h}`}>
               <img src={g.src} alt={g.cat} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--emerald-deep)]/95 via-[var(--emerald-deep)]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--emerald-deep)]/95 via-[var(--emerald-deep)]/45 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-[var(--label-gold)]">Category</div>
-                <div className="mt-0.5 font-display text-lg">{g.cat}</div>
+                <div className="inline-flex flex-col gap-1 rounded-xl bg-[var(--emerald-deep)]/70 px-3 py-2 backdrop-blur-md ring-1 ring-[var(--gold)]/30">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--gold-soft)" }}>Category</div>
+                  <div className="font-display text-xl font-semibold text-white drop-shadow">{g.cat}</div>
+                </div>
               </figcaption>
             </figure>
           ))}
