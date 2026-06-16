@@ -118,7 +118,7 @@ function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-gold hover:[&]:btn-gold-hover hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex items-center gap-2"
+            className="btn-gold hover:btn-gold-hover hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex items-center gap-2"
           >
             <Sparkles className="h-4 w-4" /> Join Community
           </a>
@@ -177,7 +177,7 @@ function Hero() {
             Aadhya Events is Ahmedabad's trusted event management, pass distribution, and event manpower network. From concerts and Navratri festivals to artist management and large-scale event operations, we deliver unforgettable experiences.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:[&]:btn-gold-hover">
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
               <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/5 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-[var(--gold)]/10 hover:border-[var(--gold)]">
@@ -355,7 +355,7 @@ function WhyChoose() {
                 Why Choose <em className="text-gold-gradient not-italic">Aadhya Events?</em>
               </h2>
               <p className="mt-5 max-w-md text-foreground/75">A network built on trust, executed with precision — across every kind of event.</p>
-              <a href="#contact" className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:[&]:btn-gold-hover">
+              <a href="#contact" className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 Work With Us <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -413,7 +413,7 @@ function Community() {
               Get instant updates on concerts, Navratri events, pass launches, stall opportunities, manpower requirements, and exclusive offers.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:[&]:btn-gold-hover">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
               </a>
               <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[var(--gold)]/30 bg-white p-2">
@@ -439,7 +439,7 @@ function Community() {
               Explore our events, artist collaborations, behind-the-scenes moments, event highlights, and latest announcements.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
-              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:[&]:btn-gold-hover">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 <Instagram className="h-4 w-4" /> Follow @aadhya.events
               </a>
               <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[var(--gold)]/30 bg-white p-2">
@@ -514,7 +514,7 @@ function ContactCTA() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href={`tel:${PHONE}`} className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:[&]:btn-gold-hover">
+            <a href={`tel:${PHONE}`} className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
               <Phone className="h-4 w-4" /> Get In Touch
             </a>
             <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/5 px-7 py-3.5 text-sm font-semibold backdrop-blur transition hover:bg-[var(--gold)]/10">
