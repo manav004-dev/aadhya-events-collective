@@ -485,10 +485,7 @@ function Gallery() {
               <img src={g.src} alt={g.cat} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--emerald-deep)]/95 via-[var(--emerald-deep)]/45 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4">
-                <div className="inline-flex flex-col gap-1 rounded-xl bg-[var(--emerald-deep)]/70 px-3 py-2 backdrop-blur-md ring-1 ring-[var(--gold)]/30">
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--gold-soft)" }}>Category</div>
-                  <div className="font-display text-xl font-semibold text-white drop-shadow">{g.cat}</div>
-                </div>
+                <div className="font-display text-xl font-semibold text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.7)]">{g.cat}</div>
               </figcaption>
             </figure>
           ))}
