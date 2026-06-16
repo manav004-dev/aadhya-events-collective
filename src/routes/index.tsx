@@ -26,8 +26,8 @@ export const Route = createFileRoute("/")({
   component: AadhyaLanding,
 });
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/";
-const INSTAGRAM_URL = "https://instagram.com/aadhya.events";
+const WHATSAPP_URL = "https://chat.whatsapp.com/DAfc2GlccG2DxLh86XflW9";
+const INSTAGRAM_URL = "https://www.instagram.com/aadhya.events";
 const PHONE = "9227117871";
 const EMAIL = "aadhya.events0512@gmail.com";
 
@@ -61,15 +61,15 @@ function AadhyaLanding() {
 function AmbientBackdrop() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-      <div className="absolute inset-0" style={{ background: "var(--gradient-emerald)" }} />
+      <div className="absolute inset-0" style={{ background: "var(--gradient-ivory)" }} />
       <div className="absolute inset-0" style={{ background: "var(--gradient-radial-glow)" }} />
       <div
-        className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full opacity-30 blur-3xl"
+        className="absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full opacity-20 blur-3xl"
         style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }}
       />
       <div
-        className="absolute top-1/2 -right-40 h-[32rem] w-[32rem] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--gold) 0%, transparent 70%)" }}
+        className="absolute top-1/2 -right-40 h-[32rem] w-[32rem] rounded-full opacity-15 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--emerald-glow) 0%, transparent 70%)" }}
       />
     </div>
   );
@@ -157,7 +157,7 @@ function Navbar() {
 /* --------------------------- Hero --------------------------- */
 function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen items-center pt-28">
+    <section className="on-dark relative isolate flex min-h-screen items-center pt-28">
       <div className="absolute inset-0 -z-10">
         <img src={heroConcert} alt="" className="h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--emerald-deep)]/70 via-[var(--emerald-deep)]/85 to-[var(--emerald-deep)]" />
@@ -173,8 +173,11 @@ function Hero() {
             <br />
             <span className="text-gold-gradient italic">Building Communities.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            Aadhya Events is Ahmedabad's trusted event management, pass distribution, and event manpower network. From concerts and Navratri festivals to artist management and large-scale event operations, we deliver unforgettable experiences.
+          <p className="mt-7 max-w-2xl font-display text-2xl font-light leading-[1.5] tracking-[0.005em] text-foreground/90 sm:text-3xl">
+            Aadhya Events is Ahmedabad's trusted partner for event management,
+            pass distribution, and event manpower — from concerts and Navratri
+            festivals to artist management and large-scale productions, we
+            craft <em className="text-gold-gradient not-italic font-medium">unforgettable experiences</em>.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
@@ -548,7 +551,7 @@ function ContactCTA() {
 /* --------------------------- Footer --------------------------- */
 function Footer() {
   return (
-    <footer className="relative mt-12 border-t border-[var(--gold)]/15 bg-[var(--emerald-deep)]/60 backdrop-blur">
+    <footer className="on-dark relative mt-12 border-t border-[var(--gold)]/20" style={{ background: "var(--gradient-emerald)" }}>
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
