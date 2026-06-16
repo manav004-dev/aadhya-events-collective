@@ -89,15 +89,15 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-2" : "py-4"
+        scrolled ? "glass-nav py-2" : "glass-nav py-3"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
           <img src={logoAsset.url} alt="Aadhya Events" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--gold)]/40" />
           <div className="leading-tight">
-            <div className="font-display text-lg font-semibold tracking-wide text-gold-gradient">AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
+            <div className="font-display text-lg font-bold tracking-wide text-gold-gradient text-glow-gold">AADHYA EVENTS</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-soft)]">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -106,7 +106,7 @@ function Navbar() {
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-medium text-foreground/85 transition-colors hover:text-[var(--gold)]"
+              className="text-sm font-semibold text-white/95 transition-colors hover:text-[var(--gold)]"
             >
               {n.label}
             </a>
@@ -140,7 +140,7 @@ function Navbar() {
         <div className="glass-nav lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-medium text-foreground/85 hover:text-[var(--gold)]">
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-semibold text-white/95 hover:text-[var(--gold)]">
                 {n.label}
               </a>
             ))}
