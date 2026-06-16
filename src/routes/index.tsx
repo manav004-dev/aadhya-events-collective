@@ -5,7 +5,7 @@ import {
   Check, Instagram, MessageCircle, Phone, Mail, ArrowRight, MapPin,
 } from "lucide-react";
 import logoAsset from "@/assets/aadhya-logo.asset.json";
-import heroConcert from "@/assets/hero-luxury.jpg";
+import heroConcert from "@/assets/hero-concert-gold.jpg";
 import gNavratri from "@/assets/gallery-navratri.jpg";
 import gArtist from "@/assets/gallery-artist.jpg";
 import gHospitality from "@/assets/gallery-hospitality.jpg";
