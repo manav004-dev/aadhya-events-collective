@@ -89,45 +89,45 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-2" : "glass-nav py-3"
+        scrolled ? "glass-nav py-0.5" : "glass-nav py-1"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-16 w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+        <a href="#home" className="flex items-center gap-1.5">
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-5 w-5 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-[10px] font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="text-[6px] uppercase tracking-[0.2em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-4 lg:flex">
           {NAV.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
+              className="text-[10px] font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
             >
               {n.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-gold hover:btn-gold-hover hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex items-center gap-2"
+            className="btn-gold hover:btn-gold-hover hidden rounded-full px-3 py-1 text-[10px] font-semibold sm:inline-flex items-center gap-1"
           >
-            <Sparkles className="h-4 w-4" /> Join Community
+            <Sparkles className="h-3 w-3" /> Join
           </a>
           <button
             onClick={() => setOpen((o) => !o)}
-            className="rounded-md border border-[var(--gold)]/30 p-2 lg:hidden"
+            className="rounded-md border border-[var(--gold)]/30 p-1 lg:hidden"
             aria-label="Toggle menu"
           >
-            <div className="flex h-5 w-5 flex-col justify-between">
+            <div className="flex h-4 w-4 flex-col justify-between">
               <span className="h-0.5 w-full bg-[var(--gold)]" />
               <span className="h-0.5 w-full bg-[var(--gold)]" />
               <span className="h-0.5 w-full bg-[var(--gold)]" />
@@ -138,14 +138,14 @@ function Navbar() {
 
       {open && (
         <div className="glass-nav lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
+          <nav className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-3">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-base font-semibold text-[var(--emerald-deep)] hover:text-[var(--gold-deep)]">
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-xs font-semibold text-[var(--emerald-deep)] hover:text-[var(--gold-deep)]">
                 {n.label}
               </a>
             ))}
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold mt-2 inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold">
-              <Sparkles className="h-4 w-4" /> Join Community
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold mt-1 inline-flex w-fit items-center gap-1 rounded-full px-3 py-1 text-[10px] font-semibold">
+              <Sparkles className="h-3 w-3" /> Join Community
             </a>
           </nav>
         </div>
