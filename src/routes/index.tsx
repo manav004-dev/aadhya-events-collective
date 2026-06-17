@@ -89,15 +89,15 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-2" : "glass-nav py-3"
+        scrolled ? "glass-nav py-0.5" : "glass-nav py-1"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-16 w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+        <a href="#home" className="flex items-center gap-1.5">
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-5 w-5 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-lg font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-[10px] font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="text-[6px] uppercase tracking-[0.2em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
