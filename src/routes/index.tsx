@@ -549,11 +549,11 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logoAsset.url} alt="Aadhya Events" className="h-14 w-14 object-contain" />
+            <div className="flex items-center gap-4">
+              <img src={logoAsset.url} alt="Aadhya Events" className="h-20 w-20 object-contain brightness-50 contrast-125 drop-shadow-lg" />
               <div>
-                <div className="font-display text-lg text-gold-gradient">AADHYA EVENTS</div>
-                <div className="text-[10px] uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
+                <div className="font-display text-xl text-gold-gradient">AADHYA EVENTS</div>
+                <div className="text-xs uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm text-foreground/70 leading-relaxed">
