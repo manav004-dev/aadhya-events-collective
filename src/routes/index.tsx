@@ -89,24 +89,24 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-0.5" : "glass-nav py-1"
+        scrolled ? "glass-nav py-1.5" : "glass-nav py-2"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-1.5">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-5 w-5 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+        <a href="#home" className="flex items-center gap-2">
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-8 w-8 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-[10px] font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="text-[6px] uppercase tracking-[0.2em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-sm font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="text-[8px] uppercase tracking-[0.2em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-4 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-[10px] font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
+              className="text-xs font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
             >
               {n.label}
             </a>
@@ -118,9 +118,9 @@ function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-gold hover:btn-gold-hover hidden rounded-full px-3 py-1 text-[10px] font-semibold sm:inline-flex items-center gap-1"
+            className="btn-gold hover:btn-gold-hover hidden rounded-full px-4 py-1.5 text-xs font-semibold sm:inline-flex items-center gap-1.5"
           >
-            <Sparkles className="h-3 w-3" /> Join
+            <Sparkles className="h-3.5 w-3.5" /> Join
           </a>
           <button
             onClick={() => setOpen((o) => !o)}
