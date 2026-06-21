@@ -399,7 +399,7 @@ function Community() {
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-30 blur-3xl" style={{ background: "var(--gradient-gold)" }} />
             <div className="flex items-center gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl" style={{ background: "var(--gradient-gold)" }}>
-                <MessageCircle className="h-7 w-7 text-[var(--emerald-deep)]" />
+                <WhatsAppIcon className="h-7 w-7 text-[var(--emerald-deep)]" />
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--label-gold)]">WhatsApp Community</p>
@@ -552,7 +552,7 @@ function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm text-foreground/70 leading-relaxed">
-              Aadhya Events — Creating Events, Managing Experiences, Driving Attendance, and Delivering Excellence.
+              Aadhya Events. Creating Events, Managing Experiences, Driving Attendance, and Delivering Excellence.
             </p>
           </div>
 
@@ -572,10 +572,10 @@ function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--gold)]/30 text-[var(--gold)] transition hover:bg-[var(--gold)] hover:text-[var(--emerald-deep)]">
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em] text-foreground/60">
+            <div className="mt-6 flex flex-col items-start gap-2 text-xs uppercase tracking-[0.25em] text-foreground/60">
               {NAV.map((n) => (
                 <a key={n.href} href={n.href} className="hover:text-[var(--gold)]">{n.label}</a>
               ))}
@@ -583,9 +583,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-[var(--gold)]/15 pt-6 text-xs text-foreground/60 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-[var(--gold)]/15 pt-6 text-xs text-foreground/60">
           <div>© {new Date().getFullYear()} Aadhya Events. All rights reserved.</div>
-          <div>Crafted in Ahmedabad · Powered by Pass Paradise</div>
         </div>
       </div>
     </footer>
