@@ -98,15 +98,15 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-3" : "glass-nav py-4"
+        scrolled ? "glass-nav py-4" : "glass-nav py-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-11 w-11 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-14 w-14 sm:h-16 sm:w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-base font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="mt-0.5 text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-lg sm:text-xl font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="mt-0.5 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -184,27 +184,17 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-2xl font-display text-2xl font-light leading-[1.5] tracking-[0.005em] text-foreground/90 sm:text-3xl">
             Aadhya Events is Ahmedabad's trusted partner for event management,
-            pass distribution, and event manpower — from concerts and Navratri
+            pass distribution, and event manpower. From concerts and Navratri
             festivals to artist management and large-scale productions, we
             craft <em className="text-gold-gradient not-italic font-medium">unforgettable experiences</em>.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
-              <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
+              <WhatsAppIcon className="h-4 w-4" /> Join WhatsApp Community
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/5 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-[var(--gold)]/10 hover:border-[var(--gold)]">
               Contact Us <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
-
-          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] text-foreground/60">
-            <span>Concerts</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Navratri</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Artist Mgmt</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Pass Paradise</span>
           </div>
         </div>
       </div>
