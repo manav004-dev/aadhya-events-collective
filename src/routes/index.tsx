@@ -89,45 +89,45 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-1.5" : "glass-nav py-2"
+        scrolled ? "glass-nav py-3" : "glass-nav py-4"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-8 w-8 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+        <a href="#home" className="flex items-center gap-3">
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-11 w-11 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-sm font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="text-[8px] uppercase tracking-[0.2em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-base font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="mt-0.5 text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-xs font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
+              className="text-sm font-semibold text-[var(--emerald-deep)] transition-colors hover:text-[var(--gold-deep)]"
             >
               {n.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-gold hover:btn-gold-hover hidden rounded-full px-4 py-1.5 text-xs font-semibold sm:inline-flex items-center gap-1.5"
+            className="btn-gold hover:btn-gold-hover hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex items-center gap-2"
           >
-            <Sparkles className="h-3.5 w-3.5" /> Join
+            <Sparkles className="h-4 w-4" /> Join
           </a>
           <button
             onClick={() => setOpen((o) => !o)}
-            className="rounded-md border border-[var(--gold)]/30 p-1 lg:hidden"
+            className="rounded-md border border-[var(--gold)]/30 p-2 lg:hidden"
             aria-label="Toggle menu"
           >
-            <div className="flex h-4 w-4 flex-col justify-between">
+            <div className="flex h-5 w-5 flex-col justify-between">
               <span className="h-0.5 w-full bg-[var(--gold)]" />
               <span className="h-0.5 w-full bg-[var(--gold)]" />
               <span className="h-0.5 w-full bg-[var(--gold)]" />
