@@ -242,18 +242,18 @@ function Stats() {
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Our Growing Network</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">Trusted across <em className="text-gold-gradient not-italic">Ahmedabad</em></h2>
         </div>
-        <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: 2000, s: "+", label: "Community Members" },
             { n: 200, s: "+", label: "Volunteers & Event Crew" },
             { n: 50, s: "+", label: "B2B Pass Partners" },
             { n: 0, s: "Multiple", label: "Events & Festivals Managed" },
           ].map((s, i) => (
-            <div key={i} className="glass-card rounded-2xl p-7 text-center transition hover:-translate-y-1">
+            <div key={i} className="glass-card flex min-w-0 flex-col items-center justify-center rounded-2xl p-7 text-center transition hover:-translate-y-1">
               {s.n > 0 ? <StatNumber target={s.n} suffix={s.s} /> : (
-                <div className="font-display text-5xl font-semibold text-gold-gradient sm:text-6xl">{s.s}</div>
+                <div className="font-display text-4xl font-semibold text-gold-gradient sm:text-5xl break-words">{s.s}</div>
               )}
-              <div className="mt-3 text-sm tracking-wide text-foreground/75">{s.label}</div>
+              <div className="mt-3 text-sm tracking-wide text-foreground/75 break-words">{s.label}</div>
             </div>
           ))}
         </div>
@@ -293,10 +293,10 @@ function About() {
 /* --------------------------- Services --------------------------- */
 const SERVICES = [
   { icon: Mic2, title: "Concert & Live Event Management", desc: "Full-stack execution for concerts, live shows and large-scale productions." },
-  { icon: Ticket, title: "Pass Distribution & Ticket Sales", desc: "Reach, sales and on-ground distribution across Ahmedabad." },
-  { icon: Network, title: "B2B Pass Reselling — Pass Paradise", desc: "Our reseller network that scales attendance and partner earnings." },
+  { icon: Ticket, title: "Pass Distribution & Ticket Sales", desc: "Reach, sales and pass distribution across Ahmedabad." },
+  { icon: Network, title: "B2B Pass Reselling Pass Paradise", desc: "Our reseller network that scales attendance and partner earnings." },
   { icon: Users, title: "Event Manpower Solutions", desc: "Trained crew for crowd, registration, hospitality and backstage." },
-  { icon: Star, title: "Artist Management & Hospitality", desc: "Coordination, logistics and white-glove artist hospitality." },
+  { icon: Star, title: "Artist Management & Hospitality", desc: "Coordination, logistics and premium artist hospitality." },
   { icon: Store, title: "Stall Booking & Vendor Management", desc: "End-to-end vendor onboarding and stall operations." },
   { icon: Megaphone, title: "Event Promotions & Marketing", desc: "On-ground, digital and influencer-led event promotions." },
   { icon: Sparkles, title: "Navratri Festival Management", desc: "Ahmedabad's signature garba festivals, executed at scale." },
@@ -351,7 +351,7 @@ function WhyChoose() {
               <h2 className="mt-3 font-display text-4xl sm:text-5xl">
                 Why Choose <em className="text-gold-gradient not-italic">Aadhya Events?</em>
               </h2>
-              <p className="mt-5 max-w-md text-foreground/75">A network built on trust, executed with precision — across every kind of event.</p>
+              <p className="mt-5 max-w-md text-foreground/75">A network built on trust, executed with precision across every kind of event.</p>
               <a href="#contact" className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 Work With Us <ArrowRight className="h-4 w-4" />
               </a>
@@ -386,7 +386,7 @@ function Community() {
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">The Inner Circle</p>
           <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
-            Join Ahmedabad's <em className="not-italic font-bold text-glow-gold" style={{ color: "var(--gold-deep)" }}>Fast-Growing</em> Event Community
+            Join Ahmedabad's <em className="not-italic font-bold text-glow-gold whitespace-nowrap" style={{ color: "var(--gold-deep)" }}>Fast&#8209;Growing</em> Event Community
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-foreground/80">
             Get event updates, pass offers, concert announcements, Navratri launches, stall opportunities, and exclusive event access.
@@ -411,12 +411,8 @@ function Community() {
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
-                <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
+                <WhatsAppIcon className="h-4 w-4" /> Join WhatsApp Community
               </a>
-              <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[var(--gold)]/30 bg-white p-2">
-                <img alt="QR code" className="h-full w-full object-contain"
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ffffff&color=0F4D32&data=${encodeURIComponent(WHATSAPP_URL)}`} />
-              </div>
             </div>
           </div>
 
