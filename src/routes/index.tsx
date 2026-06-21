@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Mic2, Ticket, Network, Users, Star, Store, Megaphone, Sparkles,
-  Check, Instagram, MessageCircle, Phone, Mail, ArrowRight, MapPin,
+  Check, Instagram, Phone, Mail, ArrowRight, MapPin,
 } from "lucide-react";
 import logoAsset from "@/assets/aadhya-logo.png.asset.json";
 import heroConcert from "@/assets/hero-concert-gold.jpg";
@@ -12,6 +12,15 @@ import gHospitality from "@/assets/gallery-hospitality.jpg";
 import gCrowd from "@/assets/gallery-crowd.jpg";
 import gPasses from "@/assets/gallery-passes.jpg";
 import gConcert from "@/assets/gallery-concert.jpg";
+
+/* Official WhatsApp logo (simplified). Inherits currentColor. */
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M16.003 3.2C9.0 3.2 3.333 8.867 3.333 15.87c0 2.49.732 4.797 1.985 6.74L3.2 28.8l6.36-2.07a12.6 12.6 0 0 0 6.44 1.74h.005c7.003 0 12.67-5.667 12.67-12.67 0-3.39-1.32-6.575-3.713-8.967A12.586 12.586 0 0 0 16.003 3.2Zm0 23.073h-.004a10.51 10.51 0 0 1-5.36-1.466l-.385-.227-3.773 1.227 1.246-3.677-.25-.39a10.495 10.495 0 0 1-1.61-5.61c0-5.81 4.73-10.54 10.54-10.54 2.815 0 5.46 1.097 7.45 3.09a10.464 10.464 0 0 1 3.085 7.456c0 5.81-4.728 10.54-10.54 10.54Zm5.78-7.89c-.317-.158-1.873-.924-2.163-1.03-.29-.106-.5-.158-.71.16-.21.317-.815 1.03-1 1.24-.184.21-.368.237-.685.08-.317-.158-1.337-.493-2.547-1.572-.94-.84-1.575-1.876-1.76-2.193-.184-.317-.02-.488.139-.646.142-.142.317-.37.475-.555.158-.184.21-.317.317-.527.106-.21.053-.395-.027-.553-.08-.158-.71-1.71-.972-2.343-.257-.617-.518-.533-.71-.543l-.604-.01c-.21 0-.553.08-.843.395-.29.317-1.108 1.083-1.108 2.64s1.134 3.066 1.292 3.276c.158.21 2.232 3.407 5.41 4.78.756.326 1.345.52 1.805.667.758.24 1.448.207 1.993.126.608-.09 1.873-.765 2.137-1.504.263-.74.263-1.373.184-1.504-.08-.132-.29-.21-.607-.368Z" />
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -89,15 +98,15 @@ function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-nav py-3" : "glass-nav py-4"
+        scrolled ? "glass-nav py-4" : "glass-nav py-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-11 w-11 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+          <img src={logoAsset.url} alt="Aadhya Events" className="h-14 w-14 sm:h-16 sm:w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
-            <div className="font-display text-base font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
-            <div className="mt-0.5 text-[10px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
+            <div className="font-display text-lg sm:text-xl font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
+            <div className="mt-0.5 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
           </div>
         </a>
 
@@ -175,27 +184,17 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-2xl font-display text-2xl font-light leading-[1.5] tracking-[0.005em] text-foreground/90 sm:text-3xl">
             Aadhya Events is Ahmedabad's trusted partner for event management,
-            pass distribution, and event manpower — from concerts and Navratri
+            pass distribution, and event manpower. From concerts and Navratri
             festivals to artist management and large-scale productions, we
             craft <em className="text-gold-gradient not-italic font-medium">unforgettable experiences</em>.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold hover:btn-gold-hover">
-              <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
+              <WhatsAppIcon className="h-4 w-4" /> Join WhatsApp Community
             </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/40 bg-white/5 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-[var(--gold)]/10 hover:border-[var(--gold)]">
               Contact Us <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
-
-          <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.25em] text-foreground/60">
-            <span>Concerts</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Navratri</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Artist Mgmt</span>
-            <span className="h-1 w-1 rounded-full bg-[var(--gold)]" />
-            <span>Pass Paradise</span>
           </div>
         </div>
       </div>
@@ -243,18 +242,18 @@ function Stats() {
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">Our Growing Network</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">Trusted across <em className="text-gold-gradient not-italic">Ahmedabad</em></h2>
         </div>
-        <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { n: 2000, s: "+", label: "Community Members" },
             { n: 200, s: "+", label: "Volunteers & Event Crew" },
             { n: 50, s: "+", label: "B2B Pass Partners" },
             { n: 0, s: "Multiple", label: "Events & Festivals Managed" },
           ].map((s, i) => (
-            <div key={i} className="glass-card rounded-2xl p-7 text-center transition hover:-translate-y-1">
+            <div key={i} className="glass-card flex min-w-0 flex-col items-center justify-center rounded-2xl p-7 text-center transition hover:-translate-y-1">
               {s.n > 0 ? <StatNumber target={s.n} suffix={s.s} /> : (
-                <div className="font-display text-5xl font-semibold text-gold-gradient sm:text-6xl">{s.s}</div>
+                <div className="font-display text-4xl font-semibold text-gold-gradient sm:text-5xl break-words">{s.s}</div>
               )}
-              <div className="mt-3 text-sm tracking-wide text-foreground/75">{s.label}</div>
+              <div className="mt-3 text-sm tracking-wide text-foreground/75 break-words">{s.label}</div>
             </div>
           ))}
         </div>
@@ -294,10 +293,10 @@ function About() {
 /* --------------------------- Services --------------------------- */
 const SERVICES = [
   { icon: Mic2, title: "Concert & Live Event Management", desc: "Full-stack execution for concerts, live shows and large-scale productions." },
-  { icon: Ticket, title: "Pass Distribution & Ticket Sales", desc: "Reach, sales and on-ground distribution across Ahmedabad." },
-  { icon: Network, title: "B2B Pass Reselling — Pass Paradise", desc: "Our reseller network that scales attendance and partner earnings." },
+  { icon: Ticket, title: "Pass Distribution & Ticket Sales", desc: "Reach, sales and pass distribution across Ahmedabad." },
+  { icon: Network, title: "B2B Pass Reselling Pass Paradise", desc: "Our reseller network that scales attendance and partner earnings." },
   { icon: Users, title: "Event Manpower Solutions", desc: "Trained crew for crowd, registration, hospitality and backstage." },
-  { icon: Star, title: "Artist Management & Hospitality", desc: "Coordination, logistics and white-glove artist hospitality." },
+  { icon: Star, title: "Artist Management & Hospitality", desc: "Coordination, logistics and premium artist hospitality." },
   { icon: Store, title: "Stall Booking & Vendor Management", desc: "End-to-end vendor onboarding and stall operations." },
   { icon: Megaphone, title: "Event Promotions & Marketing", desc: "On-ground, digital and influencer-led event promotions." },
   { icon: Sparkles, title: "Navratri Festival Management", desc: "Ahmedabad's signature garba festivals, executed at scale." },
@@ -352,7 +351,7 @@ function WhyChoose() {
               <h2 className="mt-3 font-display text-4xl sm:text-5xl">
                 Why Choose <em className="text-gold-gradient not-italic">Aadhya Events?</em>
               </h2>
-              <p className="mt-5 max-w-md text-foreground/75">A network built on trust, executed with precision — across every kind of event.</p>
+              <p className="mt-5 max-w-md text-foreground/75">A network built on trust, executed with precision across every kind of event.</p>
               <a href="#contact" className="btn-gold mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 Work With Us <ArrowRight className="h-4 w-4" />
               </a>
@@ -387,7 +386,7 @@ function Community() {
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[var(--label-gold)]">The Inner Circle</p>
           <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
-            Join Ahmedabad's <em className="not-italic font-bold text-glow-gold" style={{ color: "var(--gold-deep)" }}>Fast-Growing</em> Event Community
+            Join Ahmedabad's <em className="not-italic font-bold text-glow-gold whitespace-nowrap" style={{ color: "var(--gold-deep)" }}>Fast&#8209;Growing</em> Event Community
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-foreground/80">
             Get event updates, pass offers, concert announcements, Navratri launches, stall opportunities, and exclusive event access.
@@ -400,7 +399,7 @@ function Community() {
             <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-30 blur-3xl" style={{ background: "var(--gradient-gold)" }} />
             <div className="flex items-center gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl" style={{ background: "var(--gradient-gold)" }}>
-                <MessageCircle className="h-7 w-7 text-[var(--emerald-deep)]" />
+                <WhatsAppIcon className="h-7 w-7 text-[var(--emerald-deep)]" />
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[var(--label-gold)]">WhatsApp Community</p>
@@ -412,12 +411,8 @@ function Community() {
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
-                <MessageCircle className="h-4 w-4" /> Join WhatsApp Community
+                <WhatsAppIcon className="h-4 w-4" /> Join WhatsApp Community
               </a>
-              <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[var(--gold)]/30 bg-white p-2">
-                <img alt="QR code" className="h-full w-full object-contain"
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ffffff&color=0F4D32&data=${encodeURIComponent(WHATSAPP_URL)}`} />
-              </div>
             </div>
           </div>
 
@@ -557,7 +552,7 @@ function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm text-foreground/70 leading-relaxed">
-              Aadhya Events — Creating Events, Managing Experiences, Driving Attendance, and Delivering Excellence.
+              Aadhya Events. Creating Events, Managing Experiences, Driving Attendance, and Delivering Excellence.
             </p>
           </div>
 
@@ -577,10 +572,10 @@ function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--gold)]/30 text-[var(--gold)] transition hover:bg-[var(--gold)] hover:text-[var(--emerald-deep)]">
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
               </a>
             </div>
-            <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em] text-foreground/60">
+            <div className="mt-6 flex flex-col items-start gap-2 text-xs uppercase tracking-[0.25em] text-foreground/60">
               {NAV.map((n) => (
                 <a key={n.href} href={n.href} className="hover:text-[var(--gold)]">{n.label}</a>
               ))}
@@ -588,9 +583,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-[var(--gold)]/15 pt-6 text-xs text-foreground/60 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-[var(--gold)]/15 pt-6 text-xs text-foreground/60">
           <div>© {new Date().getFullYear()} Aadhya Events. All rights reserved.</div>
-          <div>Crafted in Ahmedabad · Powered by Pass Paradise</div>
         </div>
       </div>
     </footer>
