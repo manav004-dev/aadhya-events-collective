@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Mic2, Ticket, Network, Users, Star, Store, Megaphone, Sparkles,
-  Check, Instagram, MessageCircle, Phone, Mail, ArrowRight, MapPin,
+  Check, Instagram, Phone, Mail, ArrowRight, MapPin,
 } from "lucide-react";
 import logoAsset from "@/assets/aadhya-logo.png.asset.json";
 import heroConcert from "@/assets/hero-concert-gold.jpg";
@@ -12,6 +12,15 @@ import gHospitality from "@/assets/gallery-hospitality.jpg";
 import gCrowd from "@/assets/gallery-crowd.jpg";
 import gPasses from "@/assets/gallery-passes.jpg";
 import gConcert from "@/assets/gallery-concert.jpg";
+
+/* Official WhatsApp logo (simplified). Inherits currentColor. */
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M16.003 3.2C9.0 3.2 3.333 8.867 3.333 15.87c0 2.49.732 4.797 1.985 6.74L3.2 28.8l6.36-2.07a12.6 12.6 0 0 0 6.44 1.74h.005c7.003 0 12.67-5.667 12.67-12.67 0-3.39-1.32-6.575-3.713-8.967A12.586 12.586 0 0 0 16.003 3.2Zm0 23.073h-.004a10.51 10.51 0 0 1-5.36-1.466l-.385-.227-3.773 1.227 1.246-3.677-.25-.39a10.495 10.495 0 0 1-1.61-5.61c0-5.81 4.73-10.54 10.54-10.54 2.815 0 5.46 1.097 7.45 3.09a10.464 10.464 0 0 1 3.085 7.456c0 5.81-4.728 10.54-10.54 10.54Zm5.78-7.89c-.317-.158-1.873-.924-2.163-1.03-.29-.106-.5-.158-.71.16-.21.317-.815 1.03-1 1.24-.184.21-.368.237-.685.08-.317-.158-1.337-.493-2.547-1.572-.94-.84-1.575-1.876-1.76-2.193-.184-.317-.02-.488.139-.646.142-.142.317-.37.475-.555.158-.184.21-.317.317-.527.106-.21.053-.395-.027-.553-.08-.158-.71-1.71-.972-2.343-.257-.617-.518-.533-.71-.543l-.604-.01c-.21 0-.553.08-.843.395-.29.317-1.108 1.083-1.108 2.64s1.134 3.066 1.292 3.276c.158.21 2.232 3.407 5.41 4.78.756.326 1.345.52 1.805.667.758.24 1.448.207 1.993.126.608-.09 1.873-.765 2.137-1.504.263-.74.263-1.373.184-1.504-.08-.132-.29-.21-.607-.368Z" />
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
