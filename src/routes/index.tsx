@@ -4,7 +4,7 @@ import {
   Mic2, Ticket, Network, Users, Star, Store, Megaphone, Sparkles,
   Check, Instagram, Phone, Mail, ArrowRight, MapPin,
 } from "lucide-react";
-import logoAsset from "@/assets/aadhya-logo.png.asset.json";
+import logoAsset from "@/assets/aadhya-logo.png";
 import heroConcert from "@/assets/hero-concert-gold.jpg";
 import gNavratri from "@/assets/gallery-navratri.jpg";
 import gArtist from "@/assets/gallery-artist.jpg";
@@ -103,7 +103,7 @@ function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Aadhya Events" className="h-14 w-14 sm:h-16 sm:w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+          <img src={logoAsset} alt="Aadhya Events" className="h-14 w-14 sm:h-16 sm:w-16 object-contain brightness-50 contrast-125 drop-shadow-lg" />
           <div className="leading-tight">
             <div className="font-display text-lg sm:text-xl font-bold tracking-wide" style={{ color: "var(--emerald-deep)" }}>AADHYA EVENTS</div>
             <div className="mt-0.5 text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[var(--gold-deep)]">Elegance In Every Event</div>
@@ -541,7 +541,7 @@ function Footer() {
         <div className="grid gap-10 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-4">
-              <img src={logoAsset.url} alt="Aadhya Events" className="h-20 w-20 object-contain brightness-50 contrast-125 drop-shadow-lg" />
+              <img src={logoAsset} alt="Aadhya Events" className="h-20 w-20 object-contain brightness-50 contrast-125 drop-shadow-lg" />
               <div>
                 <div className="font-display text-xl text-gold-gradient">AADHYA EVENTS</div>
                 <div className="text-xs uppercase tracking-[0.25em] text-[var(--label-gold)]/80">Elegance In Every Event</div>
