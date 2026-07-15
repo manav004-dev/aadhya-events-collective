@@ -435,10 +435,6 @@ function Community() {
               <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:btn-gold-hover">
                 <Instagram className="h-4 w-4" /> Follow @aadhya.events
               </a>
-              <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-[var(--gold)]/30 bg-white p-2">
-                <img alt="QR code" className="h-full w-full object-contain"
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ffffff&color=0F4D32&data=${encodeURIComponent(INSTAGRAM_URL)}`} />
-              </div>
             </div>
           </div>
         </div>
