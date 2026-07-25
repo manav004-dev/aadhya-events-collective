@@ -25,11 +25,15 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aadhya Events — Ahmedabad's Premier Event Management Network" },
+      { title: "Aadhya Events — Ahmedabad's Fastest Growing Event Community" },
       { name: "description", content: "Concerts, Navratri festivals, pass distribution, event manpower, artist management & B2B reselling — Aadhya Events delivers unforgettable experiences." },
       { property: "og:title", content: "Aadhya Events — Creating Experiences. Building Communities." },
       { property: "og:description", content: "Ahmedabad's trusted event management, pass distribution & manpower network." },
       { property: "og:image", content: heroConcert },
+    ],
+    links: [
+      { rel: "icon", href: logoAsset, type: "image/png" },
+      { rel: "apple-touch-icon", href: logoAsset },
     ],
   }),
   component: AadhyaLanding,
