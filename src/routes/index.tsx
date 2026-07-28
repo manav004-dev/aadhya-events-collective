@@ -4,7 +4,7 @@ import {
   Mic2, Ticket, Network, Users, Star, Store, Megaphone, Sparkles,
   Check, Instagram, Phone, Mail, ArrowRight, MapPin,
 } from "lucide-react";
-import logoAsset from "@/assets/aadhya-logo.png";
+import logoAsset from "@/assets/android-chrome-512x512.png";
 import heroConcert from "@/assets/hero-concert-gold.jpg";
 import gNavratri from "@/assets/gallery-navratri.jpg";
 import gArtist from "@/assets/gallery-artist.jpg";
